@@ -6,5 +6,9 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 # Write your classes here :
-class Product(Base):
-    pass
+class Gallery(Base):
+    __tablename__="pics"
+    id=Column(Integer,primary_key=True)
+    name= Column(String)
+    title=Column(String)
+    

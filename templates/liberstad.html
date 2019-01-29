@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liberstad</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/temp.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+    <div id="button">
+        <a class="btn btn-primary" href="{{url_for('home')}}" role="button">Back</a>
+    </div>
+    <div class="container" id="head">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col text-center">
+                <img id="logo" class="border border-dark" src="../static/liberstad.jpg">
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+    <div class="liberstad">
+
+
+    </div>
+    <div class="container" style="padding-top:150px;">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 card shadow text-center" style="margin-top:8%;">
+                <div class="card-body">
+                    <h6 class="card-title" style="font-size:32px;font-weight:900; font-style: italic">Liberstad</h6>
+                    <p class="card-text">Here you'll find a gallery of our travels, exploits, etc. We are just unlikely
+                        travellers happend to somehow get
+                        together. I sometimes wonder if we ever make our own choices...
+                    </p>
+                    <a href="{{url_for('upload')}}" class="btn btn-primary">Upload A Pic</a>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    {% for pic in pics | reverse%}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 card text-center shadow" style="margin-top:2%;">
+                <div class="card-body">
+                    <img src="{{url_for('static', filename='images/'+pic.name)}}" class="card-img-top img-fluid" alt="##">
+                    <div class="card-body">
+                        <h5 class="card-title">{{pic.title}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    {% endfor %}
+    <section style="margin-top:5%">
+
+    </section>
+</body>
+
+</html>

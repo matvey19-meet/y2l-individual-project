@@ -1,6 +1,104 @@
-.nav{
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
+body.color{
+    background-color: rgb(68, 68, 68);
+}
+body.font{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+body.f_color{
+    color: white;
+}
+.card-img-bottom {
+    /* color: #fff; */
+    height: 20rem;
+    background: url(../cover1.jpg) center no-repeat;
+    background-size: cover;
+  }
+.card-img-bottom2 {
+    /* color: #fff; */
+    height: 18rem;
+    background: url(../liberstad.jpg) center no-repeat;
+    background-size: contain;
 
+}
+.card-img-bottom3 {
+    /* color: #fff; */
+    height: 20rem;
+    background: url(../icon.jpg) center no-repeat;
+    background-size: 100%;
+
+}
+#eee{
+    height: 320px;
+    width: 320px;
+    margin-left: 8%;
+
+}
+.text-center{
+    text-align: center !important;
+}
+#upload{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin-top: 50px;
+    margin: auto;
+}
+.liberstad{
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 8;
+    
+
+
+}
+#logo{
+    display: inline;
+    z-index: 10;
+    max-height: 150px;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+#logo:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#head{
+    position: absolute;
+    position: fixed;
+    align-self: center;
+    width: 400px;
+    padding: 20px;
+    left: 50%;
+    padding-top: 60px;
+    top: 10px;
+    margin-left: -200px;
+    z-index: 10;
+    
+}
+#button{
+    position: absolute;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    z-index: 9;
+}
+#jb{
+    border-radius: 10px;
+    background-image: url("../jb.jpg");
+    background-size: 100% 100%;
+}
+.card_c{
+    background-color: rgb(120, 120, 120)
+}
+#albm{
+    box-shadow: 0 4px 8px 0 rgba(209, 209, 209, 0.459);
+    transition: 0.3s;
+}
+#albm:hover{
+    box-shadow: 0 8px 16px 0 rgba(209, 209, 209, 0.459);
 }
